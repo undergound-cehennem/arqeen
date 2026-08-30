@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#020202">
+<meta name="description" content="Hacked By Sorryx - ARQEEN">
+<title>Hacked By Sorryx</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #020202;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body {
+    position: fixed;
+    inset: 0;
+    font-family: "Share Tech Mono", monospace;
+    color: #fff;
+    cursor: default;
+    animation: sayfaAcilis 1.8s ease-out forwards;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -1.5%;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.58),
+            rgba(0,0,0,.72)
+        ),
+        url("https://i.hizliresim.com/z9grzcug.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(35%) contrast(1.08);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 25%,
+            rgba(0,0,0,.30) 75%,
+            rgba(0,0,0,.72) 100%
+        ),
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(150,0,0,.12),
+            transparent 60%
+        );
+}
+
+.icerik {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    gap: 17px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.etiket {
+    color: #ff1616;
+    font-size: clamp(.65rem, 1vw, .9rem);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    opacity: .82;
+    text-shadow: 0 0 10px rgba(255,0,0,.35);
+}
+
+.baslik {
+    width: min(95vw, 1200px);
+    font-size: clamp(1.5rem, 4vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow:
+        0 0 8px rgba(255,0,0,.35),
+        0 0 25px rgba(255,0,0,.15);
+}
+
+.baslik span {
+    color: #ff1111;
+    text-shadow:
+        0 0 10px rgba(255,0,0,.55),
+        0 0 28px rgba(255,0,0,.2);
+}
+
+.ayrac {
+    width: min(90vw, 600px);
+    height: 1px;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,0,0,.75),
+            transparent
+        );
+    opacity: .75;
+}
+
+.metin {
+    width: min(90vw, 900px);
+    font-size: clamp(.85rem, 1.6vw, 1.45rem);
+    line-height: 1.5;
+    color: rgba(255,255,255,.88);
+    text-shadow: 0 2px 10px rgba(0,0,0,1);
+}
+
+.vurgu {
+    color: #ff1717;
+    text-shadow: 0 0 12px rgba(255,0,0,.4);
+}
+
+.alay {
+    width: min(88vw, 760px);
+    padding: 13px 20px;
+    border-left: 2px solid #ff1111;
+    border-right: 1px solid rgba(255,0,0,.2);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,0,0,.08),
+            rgba(0,0,0,.08),
+            transparent
+        );
+    color: rgba(255,255,255,.84);
+    font-size: clamp(.78rem, 1.35vw, 1.15rem);
+    line-height: 1.45;
+    box-shadow: inset 8px 0 25px rgba(255,0,0,.025);
+}
+
+.son {
+    color: #ff1010;
+    font-size: clamp(1.45rem, 4vw, 4.3rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-shadow:
+        0 0 12px rgba(255,0,0,.55),
+        0 0 35px rgba(255,0,0,.18);
+}
+
+.alt {
+    color: rgba(255,255,255,.42);
+    font-size: clamp(.6rem, .9vw, .8rem);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+}
+
+@keyframes sayfaAcilis {
+    0% {
+        opacity: 0;
+        filter: brightness(.35);
+    }
+
+    45% {
+        opacity: .55;
+        filter: brightness(.55);
+    }
+
+    75% {
+        opacity: .85;
+        filter: brightness(.82);
+    }
+
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .icerik {
+        padding: 18px;
+        gap: 13px;
+    }
+
+    body::before {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .etiket {
+        font-size: .58rem;
+        letter-spacing: 3px;
+    }
+
+    .baslik {
+        font-size: clamp(1.3rem, 7vw, 2rem);
+        letter-spacing: 1px;
+    }
+
+    .metin {
+        width: 94vw;
+        font-size: clamp(.76rem, 3.5vw, .95rem);
+        line-height: 1.4;
+    }
+
+    .alay {
+        width: 93vw;
+        padding: 10px 13px;
+        font-size: clamp(.7rem, 3.2vw, .85rem);
+    }
+
+    .son {
+        font-size: clamp(1.3rem, 7vw, 2.1rem);
+    }
+
+    .alt {
+        font-size: .55rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-height: 650px) {
+    .icerik {
+        gap: 9px;
+    }
+
+    .baslik {
+        font-size: clamp(1.2rem, 4vw, 2.5rem);
+    }
+
+    .metin {
+        font-size: clamp(.7rem, 1.4vw, 1rem);
+        line-height: 1.3;
+    }
+
+    .alay {
+        padding: 8px 15px;
+    }
+
+    .son {
+        font-size: clamp(1.25rem, 4vw, 3rem);
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<main class="icerik">
+
+<div class="etiket">
+SYSTEM OVERRIDE // ARQEEN
+</div>
+
+<div class="baslik">
+Hacked By <span>Sorryx</span>
+</div>
+
+<div class="ayrac"></div>
+
+<div class="metin">
+Bazıları gücü elinde tuttuğunu sanır.
+<span class="vurgu">
+Bazıları ise sadece verilen talimatları uygulamayı öğrenir.
+</span>
+</div>
+
+<div class="metin">
+Fazla konuşmaya gerek yok.
+<span class="vurgu">
+Kimin iz bıraktığı, kimin sadece izlediği zaten ortada.
+</span>
+</div>
+
+<div class="alay">
+Kendinizi önemli sanmanız güzel.
+<br>
+Gerçeği fark ettiğinizde ise artık biraz geç olabilir.
+<br>
+<span class="vurgu">Kontrol sizde değil. Hiç olmadı.</span>
+</div>
+
+<div class="son">
+GAME OVER
+</div>
+
+<div class="alt">
+ARQEEN TEAM // NO EXCUSES
+</div>
+
+</main>
+
+<script>
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener("selectstart", function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener("dragstart", function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener("copy", function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener("cut", function(e) {
+    e.preventDefault();
+});
+
+document.addEventListener("keydown", function(e) {
+    if (
+        (e.ctrlKey || e.metaKey) &&
+        ["c", "x", "u", "s", "a"].includes(e.key.toLowerCase())
+    ) {
+        e.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>
