@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
@@ -24,7 +23,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -112,16 +111,17 @@ body::after {
 
 .etiket {
     color: #ff1616;
-    font-size: clamp(.65rem, 1vw, .9rem);
-    letter-spacing: 5px;
+    font-family: "VT323", monospace;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    letter-spacing: 6px;
     text-transform: uppercase;
-    opacity: .82;
-    text-shadow: 0 0 10px rgba(255,0,0,.35);
+    opacity: .9;
+    text-shadow: 0 0 10px rgba(255,0,0,.5);
 }
 
 .baslik {
     width: min(95vw, 1200px);
-    font-size: clamp(1.5rem, 4vw, 4rem);
+    font-size: clamp(1.6rem, 4.2vw, 4.2rem);
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: 2px;
@@ -134,8 +134,8 @@ body::after {
 .baslik span {
     color: #ff1111;
     text-shadow:
-        0 0 10px rgba(255,0,0,.55),
-        0 0 28px rgba(255,0,0,.2);
+        0 0 10px rgba(255,0,0,.6),
+        0 0 30px rgba(255,0,0,.3);
 }
 
 .ayrac {
@@ -182,19 +182,75 @@ body::after {
     box-shadow: inset 8px 0 25px rgba(255,0,0,.025);
 }
 
+/* Hafif Ovalleştirilmiş (Rounded) ve Agresif Telegram Butonları */
+.social-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.tg-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    color: #fff;
+    font-family: "Share Tech Mono", monospace;
+    font-size: clamp(.85rem, 1.3vw, 1.1rem);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, rgba(25, 0, 0, 0.85), rgba(55, 0, 0, 0.65));
+    border: 1px solid rgba(255, 17, 17, 0.5);
+    border-radius: 6px; /* Hafif oval köşe */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.25), inset 0 0 10px rgba(255, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.tg-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.4), transparent);
+    transition: 0.5s;
+}
+
+.tg-btn:hover::before {
+    left: 100%;
+}
+
+.tg-btn:hover {
+    color: #fff;
+    background: linear-gradient(135deg, rgba(90, 0, 0, 0.95), rgba(140, 0, 0, 0.8));
+    border-color: #ff1111;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7), 0 0 50px rgba(255, 0, 0, 0.35), inset 0 0 15px rgba(255, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 0, 0, 1);
+    transform: translateY(-4px) scale(1.03);
+}
+
 .son {
     color: #ff1010;
-    font-size: clamp(1.45rem, 4vw, 4.3rem);
-    font-weight: 900;
+    font-family: "VT323", monospace;
+    font-size: clamp(2.2rem, 5.5vw, 5rem);
+    font-weight: 400;
     line-height: 1;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-shadow:
-        0 0 12px rgba(255,0,0,.55),
-        0 0 35px rgba(255,0,0,.18);
+        0 0 12px rgba(255,0,0,.6),
+        0 0 35px rgba(255,0,0,.25);
 }
 
 .alt {
-    color: rgba(255,255,255,.42);
+    color: rgba(255,255,255,.45);
     font-size: clamp(.6rem, .9vw, .8rem);
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -240,8 +296,8 @@ img {
     }
 
     .etiket {
-        font-size: .58rem;
-        letter-spacing: 3px;
+        font-size: .9rem;
+        letter-spacing: 4px;
     }
 
     .baslik {
@@ -262,7 +318,7 @@ img {
     }
 
     .son {
-        font-size: clamp(1.3rem, 7vw, 2.1rem);
+        font-size: clamp(2rem, 8vw, 3rem);
     }
 
     .alt {
@@ -290,7 +346,7 @@ img {
     }
 
     .son {
-        font-size: clamp(1.25rem, 4vw, 3rem);
+        font-size: clamp(2rem, 6vw, 3.5rem);
     }
 }
 </style>
@@ -302,7 +358,7 @@ img {
 <main class="icerik">
 
 <div class="etiket">
-SYSTEM OVERRIDE // ARQEEN
+SYSTEM OVERRIDE // ARQEEN TEAM
 </div>
 
 <div class="baslik">
@@ -312,25 +368,31 @@ Hacked By <span>𝐋𝐲𝐳𝐞 & 𝐒𝐨𝐫𝐫𝐲𝐱</span>
 <div class="ayrac"></div>
 
 <div class="metin">
-Bazıları gücü elinde tuttuğunu sanır.
+Sisteminizin ne kadar aciz ve savunmasız olduğunu görmek bizim için sadece küçük bir eğlenceydi.
 <span class="vurgu">
-Bazıları ise sadece verilen talimatları uygulamayı öğrenir.
+Güvenlik duvarı dediğiniz şey sadece boş bir hayalden ibaretmiş.
 </span>
 </div>
 
 <div class="metin">
-Fazla konuşmaya gerek yok.
+Yıllarca emek verdiğinizi sandığınız o site, şimdi bizim ellerimizde oyuncak oldu.
 <span class="vurgu">
-Kimin iz bıraktığı, kimin sadece izlediği zaten ortada.
+Arkadan bakıp sadece bakakalmanız gerçekten çok acıklı.
 </span>
 </div>
 
 <div class="alay">
-Kendinizi önemli sanmanız güzel.
+Kendinizi hacker veya sistem yöneticisi sanmaya devam edebilirsiniz.
 <br>
-Gerçeği fark ettiğinizde ise artık biraz geç olabilir.
+Gerçek şu ki; siz sadece bizim sahnemizde figüransınız.
 <br>
-<span class="vurgu">Kontrol sizde değil. Hiç olmadı.</span>
+<span class="vurgu">Kapıyı kilitlemeyi unuttuğunuz için teşekkürler, içerisi oldukça rahattı!</span>
+</div>
+
+<!-- Hafif Ovalleştirilmiş Telegram Butonları -->
+<div class="social-container">
+    <a href="https://t.me/Lyzeweb" target="_blank" class="tg-btn">𝐋𝐲𝐳𝐞</a>
+    <a href="https://t.me/sorryy_x" target="_blank" class="tg-btn">𝐒𝐨𝐫𝐫𝐲𝐱</a>
 </div>
 
 <div class="son">
